@@ -13,15 +13,15 @@ function vundle-init () {
 
 function vundle () {
   vundle-init
-  vim -u ~/.vim/bundles.vim -c "execute \"BundleInstall\" | q | q"
+  vim -u ~/.vim/bundles.vim +BundleInstall +q
 }
 
 function vundle-update () {
   vundle-init
-  vim -u ~/.vim/bundles.vim -c "execute \"BundleInstall!\" | q | q"
+  vim -u ~/.vim/bundles.vim +BundleInstall! +q
 }
 
 function vundle-clean () {
   vundle-init
-  vim -u ~/.vim/bundles.vim -c "execute \"BundleClean!\" | q | q"
+  vim -u ~/.vim/bundles.vim +BundleClean! +q
 }
