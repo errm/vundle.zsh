@@ -6,22 +6,22 @@ function vundle-init () {
 
   if [ ! -d ~/.vim/bundle/vundle/.git ] && [ ! -f ~/.vim/bundle/vundle/.git ]
   then
-    git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-    echo "\n\tRead about vim configuration for vundle at https://github.com/gmarik/vundle\n"
+    git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/vundle
+    echo "\n\tRead about vim configuration for vundle at https://github.com/VundleVim/Vundle.vim\n"
   fi
 }
 
 function vundle () {
   vundle-init
-  vim -u ~/.vim/bundles.vim +BundleInstall +q
+  vim -u ~/.vim/bundles.vim +VundleInstall +q
 }
 
 function vundle-update () {
   vundle-init
-  vim -u ~/.vim/bundles.vim +BundleInstall! +q
+  vim -u ~/.vim/bundles.vim +VundleUpdate +q
 }
 
 function vundle-clean () {
   vundle-init
-  vim -u ~/.vim/bundles.vim +BundleClean! +q
+  vim -u ~/.vim/bundles.vim +VundleClean! +q
 }
